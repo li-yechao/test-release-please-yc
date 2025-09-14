@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1-beta](https://github.com/li-yechao/test-release-please-yc/compare/test-release-please-yc-a-v1.0.0...test-release-please-yc-a-v1.0.1-beta) (2025-09-14)
+
+
+### Bug Fixes
+
+* 1 ([5bdbb42](https://github.com/li-yechao/test-release-please-yc/commit/5bdbb42903630878e0d292264b339d6c28c2ff35))
+
 ## 1.0.0 (2025-09-14)
 
 
