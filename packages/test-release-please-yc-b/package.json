@@ -10,5 +10,6 @@
   "type": "commonjs",
   "dependencies": {
     "test-release-please-yc-a": "workspace:^"
-  }
+  },
+  "version": "1.0.0"
 }
