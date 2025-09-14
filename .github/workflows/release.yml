@@ -1,0 +1,65 @@
+name: Release
+
+env:
+  NODE_OPTIONS: "--max_old_space_size=6144"
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      IS_RELEASE: ${{ contains(github.event.head_commit.message, '[release]') && 'true' || 'false' }}
+      NPM_TAG: ${{ contains(github.event.head_commit.message, '[release]') && 'latest' || 'beta' }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          config-file: ${{ env.IS_RELEASE == 'true' && 'release-please-config.json' || 'release-please-config-beta.json' }}
+
+      - name: Check if need to publish
+        if: ${{ steps.release.outputs.release_created }}
+        id: publish
+        run: |
+            echo "publish=true" >> $GITHUB_OUTPUT
+
+      - name: Checkout
+        if: ${{ steps.publish.outputs.publish }}
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: pnpm/action-setup@v3
+        if: ${{ steps.publish.outputs.publish }}
+        with:
+          version: 10
+
+      - name: Setup node
+        if: ${{ steps.publish.outputs.publish }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Setup bun
+        if: ${{ steps.publish.outputs.publish }}
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        if: ${{ steps.publish.outputs.publish }}
+        run: |
+          pnpm install
+
+      - name: Publish to NPM
+        if: ${{ steps.publish.outputs.publish }}
+        run: |
+          npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
+          pnpm -r publish --access public --no-git-checks --tag ${{ env.NPM_TAG }}
