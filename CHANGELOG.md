@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.4](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4-beta.1...test-replease-yc-v1.0.4) (2025-09-21)
+
 ## [1.0.4-beta.1](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4-beta...test-replease-yc-v1.0.4-beta.1) (2025-09-21)
 
 
