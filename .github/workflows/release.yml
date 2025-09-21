@@ -19,7 +19,7 @@ jobs:
       IS_RELEASE: ${{ contains(github.event.head_commit.message, '[release]') && 'true' || 'false' }}
       NPM_TAG: ${{ contains(github.event.head_commit.message, '[release]') && 'latest' || 'beta' }}
     steps:
-      - uses: AIGNE-io/release-please-action
+      - uses: AIGNE-io/release-please-action@v4.3.0
         id: release
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
