@@ -23,7 +23,6 @@ jobs:
         id: release
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
-          config-file: ${{ env.IS_RELEASE == 'true' && 'release-please-config.json' || 'release-please-config-beta.json' }}
 
       - name: Check if need to publish
         if: ${{ steps.release.outputs.release_created }}

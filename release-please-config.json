@@ -1,12 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "release-type": "node",
-  "prerelease": false,
-  "versioning": "always-bump-patch",
+  "prerelease": true,
+  "versioning": "prerelease",
   "packages": {
-    ".": {},
-    "packages/test-release-please-yc-a": {},
-    "packages/test-release-please-yc-b": {}
+    ".": {
+      "prerelease-type": "beta"
+    },
+    "packages/test-release-please-yc-a": {
+      "prerelease-type": "beta"
+    },
+    "packages/test-release-please-yc-b": {
+      "prerelease-type": "beta"
+    }
  },
   "plugins": [
     {
