@@ -15,15 +15,11 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
-    env:
-      IS_RELEASE: ${{ contains(github.event.head_commit.message, '[release]') && 'true' || 'false' }}
-      NPM_TAG: ${{ contains(github.event.head_commit.message, '[release]') && 'latest' || 'beta' }}
     steps:
       - uses: AIGNE-io/release-please-action@v4.3.0
         id: release
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
-          release-stable: ${{ env.IS_RELEASE }}
 
       - name: Check if need to publish
         if: ${{ steps.release.outputs.release_created }}
@@ -62,7 +58,6 @@ jobs:
         if: ${{ steps.publish.outputs.publish }}
         run: |
           npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPM_TOKEN }}"
-          # pnpm -r publish --access public --no-git-checks --tag ${{ env.NPM_TAG }}
           pnpm -r exec -- bash -c '
             TAG=$(node -p "require(\"./package.json\").version.includes(\"beta\") ? \"beta\" : \"latest\"")
             pnpm publish --access public --no-git-checks --tag $TAG || true
