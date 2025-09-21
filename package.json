@@ -1,6 +1,6 @@
 {
   "name": "test-replease-yc",
-  "version": "1.0.3-beta",
+  "version": "1.0.3",
   "private": true,
   "scripts": {},
   "devDependencies": {}
