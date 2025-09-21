@@ -19,10 +19,11 @@ jobs:
       IS_RELEASE: ${{ contains(github.event.head_commit.message, '[release]') && 'true' || 'false' }}
       NPM_TAG: ${{ contains(github.event.head_commit.message, '[release]') && 'latest' || 'beta' }}
     steps:
-      - uses: googleapis/release-please-action@v4
+      - uses: AIGNE-io/release-please-action
         id: release
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          release-stable: ${{ env.IS_RELEASE }}
 
       - name: Check if need to publish
         if: ${{ steps.release.outputs.release_created }}
