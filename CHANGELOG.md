@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0-beta.2](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.11.0-beta.1...test-replease-yc-v1.11.0-beta.2) (2026-01-19)
+
+
+### Features
+
+* test new feature release ([c1437e6](https://github.com/li-yechao/test-release-please-yc/commit/c1437e67c9b4215d22759535895d22450b97dea6))
+
 ## [1.11.0-beta.1](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.11.0-beta...test-replease-yc-v1.11.0-beta.1) (2026-01-19)
 
 
