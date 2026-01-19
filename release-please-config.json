@@ -3,9 +3,16 @@
   "release-type": "node",
   "packages": {
     ".": {
+      "prerelease": true,
+      "prerelease-type": "beta",
+      "versioning": "prerelease",
       "extra-files": [
-        "packages/*/package.json",
-        "providers/*/package.json"
+        {
+          "type": "json",
+          "glob": true,
+          "path": "packages/*/package.json",
+          "jsonpath": "$.version"
+        }
       ]
     }
   }

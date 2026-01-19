@@ -20,8 +20,8 @@ jobs:
       - uses: googleapis/release-please-action@v4
         with:
           manifest-file: .release-please-manifest.json
-          prerelease: ${{ github.ref_name == 'main' }}
-          prerelease-type: main
+          config-file:  ${{ github.ref_name == 'release' && 'release-please-config-release.json' || 'release-please-config.json' }}
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
 
       - name: Check if need to publish
         if: ${{ steps.release.outputs.release_created }}
