@@ -1,23 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
   "release-type": "node",
-  "prerelease": true,
-  "versioning": "prerelease",
   "packages": {
     ".": {
-      "prerelease-type": "beta"
-    },
-    "packages/test-release-please-yc-a": {
-      "prerelease-type": "beta"
-    },
-    "packages/test-release-please-yc-b": {
-      "prerelease-type": "beta"
+      "extra-files": [
+        "packages/*/package.json",
+        "providers/*/package.json"
+      ]
     }
- },
-  "plugins": [
-    {
-      "type": "node-workspace",
-      "updatePeerDependencies": true
-    }
-  ]
+  }
 }

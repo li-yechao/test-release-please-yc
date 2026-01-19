@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - release
 
 permissions:
   contents: write
@@ -16,10 +17,11 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: AIGNE-io/release-please-action@v4.3.1
-        id: release
+      - uses: googleapis/release-please-action@v4
         with:
-          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          manifest-file: .release-please-manifest.json
+          prerelease: ${{ github.ref_name == 'main' }}
+          prerelease-type: main
 
       - name: Check if need to publish
         if: ${{ steps.release.outputs.release_created }}
