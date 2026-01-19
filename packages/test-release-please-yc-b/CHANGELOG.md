@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.5-beta](https://github.com/li-yechao/test-release-please-yc/compare/test-release-please-yc-b-v1.0.4...test-release-please-yc-b-v1.0.5-beta) (2026-01-19)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * test-release-please-yc-a bumped to 1.0.3-beta
+
 ## [1.0.4](https://github.com/li-yechao/test-release-please-yc/compare/test-release-please-yc-b-v1.0.4-beta.1...test-release-please-yc-b-v1.0.4) (2025-09-21)
 
 ## [1.0.4-beta.1](https://github.com/li-yechao/test-release-please-yc/compare/test-release-please-yc-b-v1.0.4-beta...test-release-please-yc-b-v1.0.4-beta.1) (2025-09-21)

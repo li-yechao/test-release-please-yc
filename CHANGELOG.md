@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5-beta](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4...test-replease-yc-v1.0.5-beta) (2026-01-19)
+
+
+### Bug Fixes
+
+* a4 ([ba971f3](https://github.com/li-yechao/test-release-please-yc/commit/ba971f312c28e2e5ab6005d1accae0378b0354f1))
+* use same version for all packages ([cb002b5](https://github.com/li-yechao/test-release-please-yc/commit/cb002b5926e2efb1c1bb2abb348fb69e62aa91f8))
+
 ## [1.0.4](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4-beta.1...test-replease-yc-v1.0.4) (2025-09-21)
 
 ## [1.0.4-beta.1](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4-beta...test-replease-yc-v1.0.4-beta.1) (2025-09-21)
