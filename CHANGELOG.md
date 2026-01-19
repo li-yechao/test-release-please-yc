@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.12.0](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.11.0...test-replease-yc-v1.12.0) (2026-01-19)
+
+
+### Features
+
+* [release-stable] ([c18d5ee](https://github.com/li-yechao/test-release-please-yc/commit/c18d5ee90ba4e0e4d4c83e2761d1002a322940aa))
+* test breaking change for beta release ([95466f3](https://github.com/li-yechao/test-release-please-yc/commit/95466f3c212550dff60e98e3ed959723f2f6b93e))
+
+
+### Bug Fixes
+
+* fix a bug for apckage a ([7c7da6d](https://github.com/li-yechao/test-release-please-yc/commit/7c7da6d89d12ddeeef4a9f59c6e1b6b084ddf5bf))
+
 ## [1.12.0-beta.1](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.12.0-beta...test-replease-yc-v1.12.0-beta.1) (2026-01-19)
 
 
