@@ -11,5 +11,5 @@
   "dependencies": {
     "test-release-please-yc-a": "workspace:^"
   },
-  "version": "1.12.0-beta"
+  "version": "1.12.0-beta.1"
 }
