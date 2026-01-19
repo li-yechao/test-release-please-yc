@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.11.0-beta](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.10.0...test-replease-yc-v1.11.0-beta) (2026-01-19)
+
+
+### Features
+
+* publish first version ([324d8e1](https://github.com/li-yechao/test-release-please-yc/commit/324d8e1f1bd6cc4cba769410bf09319b1bc49a78))
+
+
+### Bug Fixes
+
+* 1 ([5bdbb42](https://github.com/li-yechao/test-release-please-yc/commit/5bdbb42903630878e0d292264b339d6c28c2ff35))
+* 2 ([0b16c67](https://github.com/li-yechao/test-release-please-yc/commit/0b16c67d4146a6f1cbe56325f87a17421de5183a))
+* a3 ([f8450f3](https://github.com/li-yechao/test-release-please-yc/commit/f8450f3718f3debb0b0c3bc62802b120a40c9832))
+* a4 ([ba971f3](https://github.com/li-yechao/test-release-please-yc/commit/ba971f312c28e2e5ab6005d1accae0378b0354f1))
+* b1 ([0febf66](https://github.com/li-yechao/test-release-please-yc/commit/0febf66dee4a2548843b7cf923ef4b5d3c4543d6))
+* b2 ([c7ecd7c](https://github.com/li-yechao/test-release-please-yc/commit/c7ecd7cd3148ee78874a2e2d70bb8ffec5ce3da3))
+* b3 ([afe66e8](https://github.com/li-yechao/test-release-please-yc/commit/afe66e821629e2320e65fca26e516a9c961ea9f5))
+* correct npm tag ([3ad013d](https://github.com/li-yechao/test-release-please-yc/commit/3ad013ddb4e78ebb9cf7d6754b9845b5f512e807))
+* release stable version [release] ([c63a2a1](https://github.com/li-yechao/test-release-please-yc/commit/c63a2a1c08721556898e2183d2b3233c8ade76e1))
+* remove beta.json ([ef6c606](https://github.com/li-yechao/test-release-please-yc/commit/ef6c606e4e9079ccfa0df5ea7fe09183a2283f5c))
+* use same version for all packages ([f27138c](https://github.com/li-yechao/test-release-please-yc/commit/f27138cfff2fb2c643941582892c0722aaee5315))
+* use same version for all packages ([b539a29](https://github.com/li-yechao/test-release-please-yc/commit/b539a295265e621db956bb253e029e51281ef75a))
+* use same version for all packages ([cb002b5](https://github.com/li-yechao/test-release-please-yc/commit/cb002b5926e2efb1c1bb2abb348fb69e62aa91f8))
+
 ## [1.0.4](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4-beta.1...test-replease-yc-v1.0.4) (2025-09-21)
 
 ## [1.0.4-beta.1](https://github.com/li-yechao/test-release-please-yc/compare/test-replease-yc-v1.0.4-beta...test-replease-yc-v1.0.4-beta.1) (2025-09-21)
