@@ -10,6 +10,11 @@
           "glob": true,
           "path": "packages/*/package.json",
           "jsonpath": "$.version"
+        },
+        {
+          "type": "json",
+          "path": ".release-please-manifest.json",
+          "jsonpath": "$.."
         }
       ]
     }
