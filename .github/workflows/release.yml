@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - main
-      - release
 
 permissions:
   contents: write
@@ -18,9 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           manifest-file: .release-please-manifest.json
-          config-file:  ${{ github.ref_name == 'release' && 'release-please-config-release.json' || 'release-please-config.json' }}
+          config-file:  ${{ contains(github.event.head_commit.message, '[release-stable]') && 'release-please-config-release.json' || 'release-please-config.json' }}
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
 
       - name: Check if need to publish
