@@ -6,6 +6,7 @@
       "prerelease": true,
       "prerelease-type": "beta",
       "versioning": "prerelease",
+      "bump-patch-for-minor-pre-major": true,
       "extra-files": [
         {
           "type": "json",

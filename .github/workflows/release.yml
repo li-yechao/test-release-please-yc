@@ -19,7 +19,7 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
-          manifest-file: .release-please-manifest.json
+          manifest-file: ${{ contains(github.event.head_commit.message, '[release-stable]') && '.release-please-manifest-release.json' || '.release-please-manifest.json' }}
           config-file:  ${{ contains(github.event.head_commit.message, '[release-stable]') && 'release-please-config-release.json' || 'release-please-config.json' }}
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
 
